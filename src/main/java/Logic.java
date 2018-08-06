@@ -23,7 +23,9 @@ class Logic {
 
         for (; xnum.getMap().get("d4").increaseValue(); ) {
             for (; xnum.getMap().get("d3").increaseValue(); ) {
+                System.out.println("d3");
                 for (; xnum.getMap().get("c3").increaseValue(); ) {
+                    System.out.println("c3");
 
                     for (; xnum.getMap().get("c4").increaseValue(); ) {
                         for (; xnum.getMap().get("d2").increaseValue(); ) {
