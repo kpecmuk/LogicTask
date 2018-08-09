@@ -21,23 +21,18 @@ class Logic {
     void run() {
         System.out.println("CALCULATING...");
 
-        for (; xnum.getMap().get("d4").increaseValue(); ) {
-            for (; xnum.getMap().get("d3").increaseValue(); ) {
-                System.out.println("d3");
-                for (; xnum.getMap().get("c3").increaseValue(); ) {
-                    System.out.println("c3");
-
-                    for (; xnum.getMap().get("c4").increaseValue(); ) {
-                        for (; xnum.getMap().get("d2").increaseValue(); ) {
-                            for (; xnum.getMap().get("b4").increaseValue(); ) {
-
-                                for (; xnum.getMap().get("b2").increaseValue(); ) {
-                                    for (; xnum.getMap().get("c1").increaseValue(); ) {
-                                        for (; xnum.getMap().get("b1").increaseValue(); ) {
-
-                                            for (; xnum.getMap().get("a3").increaseValue(); ) {
-                                                for (; xnum.getMap().get("a2").increaseValue(); ) {
-                                                    for (; xnum.getMap().get("a1").increaseValue(); ) {
+        for (xnum.getMap().get("d4"); xnum.getMap().get("d4").valueIsNotMax(); xnum.getMap().get("d4").increaseValue()) {
+            for (xnum.getMap().get("d3"); xnum.getMap().get("d3").valueIsNotMax(); xnum.getMap().get("d3").increaseValue()) {
+                for (xnum.getMap().get("c3"); xnum.getMap().get("c3").valueIsNotMax(); xnum.getMap().get("c3").increaseValue()) {
+                    for (xnum.getMap().get("c4"); xnum.getMap().get("c4").valueIsNotMax(); xnum.getMap().get("c4").increaseValue()) {
+                        for (xnum.getMap().get("d2"); xnum.getMap().get("d2").valueIsNotMax(); xnum.getMap().get("d2").increaseValue()) {
+                            for (xnum.getMap().get("b4"); xnum.getMap().get("b4").valueIsNotMax(); xnum.getMap().get("b4").increaseValue()) {
+                                for (xnum.getMap().get("b2"); xnum.getMap().get("b2").valueIsNotMax(); xnum.getMap().get("b2").increaseValue()) {
+                                    for (xnum.getMap().get("c1"); xnum.getMap().get("c1").valueIsNotMax(); xnum.getMap().get("c1").increaseValue()) {
+                                        for (xnum.getMap().get("b1"); xnum.getMap().get("b1").valueIsNotMax(); xnum.getMap().get("b1").increaseValue()) {
+                                            for (xnum.getMap().get("a3"); xnum.getMap().get("a3").valueIsNotMax(); xnum.getMap().get("a3").increaseValue()) {
+                                                for (xnum.getMap().get("a2"); xnum.getMap().get("a2").valueIsNotMax(); xnum.getMap().get("a2").increaseValue()) {
+                                                    for (xnum.getMap().get("a1"); xnum.getMap().get("a1").valueIsNotMax(); xnum.getMap().get("a1").increaseValue()) {
 
                                                         if (solution.check()) {
                                                             System.out.println("DONE");

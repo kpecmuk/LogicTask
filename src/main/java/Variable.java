@@ -7,19 +7,24 @@ class Variable {
     }
 
     Double getValue() {
-        return value;
+        return this.value;
     }
 
-    boolean increaseValue() {
+    boolean valueIsNotMax() {
         boolean result = true;
 
-        if (value < 10) {
+        if (value >= 10) {
+            value = 1.0;
+            result = false;
+        }
+        return result;
+    }
+
+    void increaseValue() {
+        if (valueIsNotMax()) {
             value++;
         } else {
-            result = false;
             value = 1.0;
         }
-
-        return result;
     }
 }
