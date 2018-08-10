@@ -28,7 +28,7 @@ class XNum {
         // Добавляем нижнюю строку переменных   9-D2+D3=D4
         map.put("d2", new Variable());
         map.put("d3", new Variable());
-        map.put("d4", new Variable());
+        map.put("d4", new Variable(4));
     }
 
     Map<String, Variable> getMap() {

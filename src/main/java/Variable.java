@@ -6,25 +6,22 @@ class Variable {
         this.value = 1.0;
     }
 
+    Variable(double value) {
+        this.value = value;
+    }
+
     Double getValue() {
-        return this.value;
+        return this.value - 1;
     }
 
-    boolean valueIsNotMax() {
+    boolean increaseValue() {
         boolean result = true;
-
-        if (value >= 10) {
-            value = 1.0;
-            result = false;
-        }
-        return result;
-    }
-
-    void increaseValue() {
-        if (valueIsNotMax()) {
+        if (value < Logic.MAX_VALUE) {
             value++;
         } else {
+            result = false;
             value = 1.0;
         }
+        return result;
     }
 }
