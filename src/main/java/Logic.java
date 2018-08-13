@@ -1,7 +1,10 @@
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.Map;
-import java.util.WeakHashMap;
 
 class Logic {
+    private static final Logger log = LoggerFactory.getLogger(Logic.class);
 
     static final int MAX_VALUE = 10;
     private XNum xnum;
@@ -14,14 +17,13 @@ class Logic {
 
     private void showInfo() {
         for (Map.Entry<String, Variable> var : xnum.getMap().entrySet()) {
-
             System.out.print(var.getKey() + " = " + var.getValue().getValue() + " | ");
         }
         System.out.println();
     }
 
     void run() {
-        System.out.println("CALCULATING...");
+        log.info("calculating...");
 
         while (xnum.getMap().get("d4").increaseValue()) {
             while (xnum.getMap().get("d3").increaseValue()) {
@@ -37,7 +39,7 @@ class Logic {
                                                     while (xnum.getMap().get("a1").increaseValue()) {
 
                                                         if (solution.check()) {
-                                                            System.out.println("DONE");
+                                                            log.info("Solution found");
                                                             showInfo();
                                                             return;
                                                         }
@@ -54,5 +56,6 @@ class Logic {
                 }
             }
         }
+        log.info("!!! No solution !!!");
     }
 }

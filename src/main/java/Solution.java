@@ -21,7 +21,7 @@ class Solution {
                 (xnum.getMap().get("a2").getValue() - xnum.getMap().get("b2").getValue() + 2 == xnum.getMap().get("d2").getValue()) &&
                 ((xnum.getMap().get("a3").getValue() - 3) / xnum.getMap().get("c3").getValue() == xnum.getMap().get("d3").getValue()) &&
                 (3 * xnum.getMap().get("b4").getValue() / xnum.getMap().get("c4").getValue() == xnum.getMap().get("d4").getValue())
-                ) {
+        ) {
 
             result = true;
         }
